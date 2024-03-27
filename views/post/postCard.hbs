@@ -1,0 +1,114 @@
+<div class="container-xl">
+    <div class="row row-cards">
+        {{#each post}}
+        <div class="col-md-4 mt-2 postCard">
+            <div class="card">
+                <div class="card-header d-block overflow-hidden">
+                    <div class="row ">
+                        <div class="col-auto">
+                            <span class="avatar" style="background-image: url({{user.profilephoto}})"></span>
+                        </div>
+                        <div class="col p-0">
+                            <div class="card-title">{{user.fullName}}</div>
+                            <div class="text-muted">{{user.email}}</div>
+                        </div>
+                        {{!-- <div class="d-flex flex-row col-4 bd-highlight mb-3">
+                            <div class="p-2 bd-highlight">Flex item 1</div>
+                            <div class="p-2 bd-highlight">Flex item 2</div>
+                            <div class="p-2 bd-highlight">Flex item 3</div>
+                        </div> --}}
+                        {{#if ../userLogIn}}
+                        <div class="d-inline-flax flex-row col-5 align-self-center text-end">
+                            <a class="p-1 bd-highlight viewPost" href="javascript:void(0)" data-id="{{_id}}"
+                                style="text-decoration: none; color: black;"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-eye" width="24" height="24" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                    <path
+                                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6">
+                                    </path>
+                                </svg></a>
+                            {{!-- {{../userLogIn.email}}
+                            {{user.email}} --}}
+                            {{#userCompare user.email "===" ../userLogIn.email}}
+                            <a class="p-1 bd-highlight editPost" href="javascript:void(0)" data-id="{{_id}}"
+                                style="text-decoration: none; color: black;"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-pencil-minus" width="24" height="24"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M8 20l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4h4z"></path>
+                                    <path d="M13.5 6.5l4 4"></path>
+                                    <path d="M16 18h4"></path>
+                                </svg></a>
+                            <a class="p-1 bd-highlight archivePost" href="javascript:void(0)" data-id="{{_id}}"
+                                style="text-decoration: none; color: black;"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-archive" width="24" height="24"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                    </path>
+                                    <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10"></path>
+                                    <path d="M10 12l4 0"></path>
+                                </svg></a>
+                            {{/userCompare}}
+                            {{#userCompare user.email "!=" ../userLogIn.email}}
+                            <a class="p-1 bd-highlight savePost" href="javascript:void(0)" data-id="{{_id}}" data-value="false"
+                                style="text-decoration: none; color: black;"><i class="bi bi-bookmark"></i></a>
+                            {{/userCompare}}
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    {{!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-100" preserveAspectRatio="none" width="400"
+                        height="200" viewBox="0 0 400 200" fill="transparent"
+                        stroke="var(--tblr-border-color, #b8cef1)">
+                        <line x1="0" y1="0" x2="400" y2="200"></line>
+                        <line x1="0" y1="200" x2="400" y2="0"></line>
+                    </svg> --}}
+
+                    <!-- Photo -->
+                    <div class="img-responsive img-responsive-21x25 card-img-top"
+                        style="background-image: url({{postImg}})"></div>
+                    <div class="card-body" style="height: 100px;">
+                        <h3 class="card-title fs-4">{{title}}</h3>
+                        <p class="text-muted">{{description}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <ul class="pagination justify-content-end mt-3">
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M15 6l-6 6l6 6"></path>
+                </svg>
+                prev
+            </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item "><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#">
+                next <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 6l6 6l-6 6"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div>

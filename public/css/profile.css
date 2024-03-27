@@ -1,0 +1,87 @@
+  /* ///////////////////////////////////////////////////////////////////////////////////////////////// */
+  body {
+    color: #797979;
+    background: #f1f2f7;
+    font-family: "Open Sans", sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 13px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+  }
+  .row{
+    text-align: center;
+    font-size: medium;
+  }
+  .profile-nav,
+  .profile-info {
+    margin-top: 30px;
+  }
+  
+  .profile-nav .user-heading {
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .profile-nav .user-heading.round a {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
+  }
+  
+  .profile-nav .user-heading a img {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+  
+  .profile-nav .user-heading h1 {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 3px;
+    margin-top: 10px;
+  }
+  
+  .profile-nav .user-heading p {
+    font-size: 12px;
+  }
+  
+  .profile-nav ul > li {
+    border-bottom: 1px solid #ebeae6;
+    margin-top: 0;
+    line-height: 30px;
+    margin-top: 1px;
+  }
+  .profile-nav ul > li > a {
+    border-radius: 0;
+    color: whitesmoke;
+    padding-left: 3px;
+    border-left: 5px solid #fbc02d;
+  }
+  
+  .bio-graph-heading {
+    background: #ffca47;
+      color: #4a0a0a;
+      text-align: center;
+      font-style: italic;
+      padding: 35px 110px;
+      border-radius: 4px 4px 0 0;
+      -webkit-border-radius: 4px 4px 0 0;
+      font-size: 20px;
+      font-weight: 300;
+  }
+  
+  .bio-graph-info {
+    color: whitesmoke;
+    margin-top: 12px;
+  }
+  #profile-inputs{
+    background-color: #1f262e;
+    border: none;
+  }
+  

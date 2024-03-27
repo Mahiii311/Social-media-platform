@@ -1,0 +1,41 @@
+<div class="modal modal-blur fade show" id="modal-simple" tabindex="-1" style="display: block;" aria-modal="true"
+    role="document">
+    <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-start">
+                <span class="avatar" style="background-image: url({{viewData.user.profilephoto}})"></span>
+                <span class="ms-2">
+                    <div class="modal-title">{{viewData.user.fullName}}</div>
+                    <div class="text-muted">{{viewData.user.email}}</div>
+                </span>
+                <button type="button" class="btn-close" id="closeModel" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <form id="editPostForm" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class=" img-thumbnail "><img src="{{viewData.postImg}}" class="img-fluid" alt="..."></div>
+                    <div class="mb-3">
+                        <label for="userPost" class="form-label fs-5">change Image:</label>
+                        <input type="file" class="form-control" id="postImg" name="postImg">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fs-5">Title</label>
+                        <input class="form-control" id="title" name="title" value="{{viewData.title}}"
+                            placeholder="title">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fs-5">Description</label>
+                        <textarea class="form-control" id="description" name="description"
+                            rows="5">{{viewData.description}}</textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    {{!-- <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button> --}}
+                    <button type="submit" id="upload-btn" class="btn btn-primary me-5">Save Change</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{!-- js file --}}
+<script src="/javascripts/editPost.js"></script>

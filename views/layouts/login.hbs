@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{!-- fav-icon --}}
+  <link rel="shortcut icon" href="#">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <title>{{title}}</title>
+  <!-- CSS files -->
+  <link href="/dist/css/tabler.min.css?1674944402" rel="stylesheet" />
+  <link href="/dist/css/tabler-flags.min.css?1674944402" rel="stylesheet" />
+  <link href="/dist/css/tabler-payments.min.css?1674944402" rel="stylesheet" />
+  <link href="/dist/css/tabler-vendors.min.css?1674944402" rel="stylesheet" />
+  <link href="/dist/css/demo.min.css?1674944402" rel="stylesheet" />
+  <style>
+    @import url('https://rsms.me/inter/inter.css');
+
+    :root {
+      --tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+    }
+
+    body {
+      font-feature-settings: "cv03", "cv04", "cv11";
+    }
+  </style>
+  {{!-- {{{_sections.style}}} --}}
+</head>
+
+<body>
+  {{{body}}}
+  {{!-- <h1 style="color:black">Main layout</h1> --}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+  {{!-- {{{_sections.script}}} --}}
+</body>
+
+</html>

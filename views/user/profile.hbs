@@ -1,0 +1,77 @@
+<div class="container bootstrap snippets bootdey pt-2" style="background-color: #04242e; height: 75%; ">
+  <div class="bio-graph-heading">
+          Designing is The Silent Ambassdar of Your Brand.
+
+        </div>
+  <div class="row">
+    <div class="profile-nav col-md-3">
+      <div class="panel">
+        <div class="user-heading round">
+          <a href="javascript:void(0)">
+            <img src="{{userLogIn.profilephoto}}" alt="" />
+          </a>
+          {{!-- <div class="image-upload">
+            <label for="file-input">
+              <img src="/uploadphoto.png" alt="uploadPhoto" style={{ width: "25px" , marginLeft: "5px" }} />
+            </label>
+
+            <input id="file-input" type="file" style={{ display: "none" }}>
+          </div> --}}
+          <h1>
+            {{userLogIn.fullName}}
+          </h1>
+          <p>{{userLogIn.email}}</p>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="profile-info col-md-9">
+      <div class="panel">
+        
+        <div class="panel-body bio-graph-info">
+          <h1>Bio Graph</h1>
+          <div class="row mt-5 fs-5">
+            <div class="col">
+              <p>
+                <span>First Name: </span>
+                {{userLogIn.firstName}}
+              </p>
+
+              <p>
+                <span>Last Name: </span>
+                {{userLogIn.lastName}}
+              </p>
+
+              <p>
+                <span>Email: </span>{{userLogIn.email}}
+              </p>
+
+            </div>
+            <div class="col">
+              <p>
+                <span>Occupation</span>
+                Developer
+              </p>
+
+              <p>
+                <span>Linkedin Id </span>
+                linkedin/in/rajan-sahani
+              </p>
+
+              <p>
+                <span>Country </span>
+                India
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{#section 'style'}}
+<link href="/css/profile.css" rel="stylesheet" />
+{{/section}}

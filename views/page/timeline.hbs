@@ -1,0 +1,57 @@
+{{!-- page header --}}
+<div class="page-header mt-2 mb-2 d-print-none">
+    <div class="container-xl">
+        <div class="row g-2 align-items-center">
+            <div class="col-auto">
+                <h3 class="page-title">
+                    POSTS
+                </h3>
+            </div>
+            <!-- Page title actions -->
+            <div class="col-auto ms-auto d-print-none">
+                <div class="d-flex">
+                    <div class="me-2 d-flex">
+                        <span class="mt-2 me-2">Sort</span>
+                        <span>
+                            <select class="form-select" aria-label="Default select example" name="sort" id="sort">
+                                <option value="">Title</option>
+                                <option value="">Date</option>
+                                {{!-- <option value="/products/list/{{_id}}" {{#if isSelected}}selected{{/if}}>{{name}}
+                                </option> --}}
+                            </select>
+                        </span>
+                        {{#if userLogIn}}
+                        <span class="mt-2 ms-2 me-2">Filter</span>
+                        <span>
+                            <select class="form-select" aria-label="Default select example" name="filter" id="filter">
+                                <option value="">All</option>
+                                <option value="">Mine</option>
+                                <option value="">Other</option>
+                            </select>
+                        </span>
+                        {{/if}}
+                    </div>
+                    <div class="input-icon">
+                        <input type="text" value="" class="form-control" placeholder="Search…">
+                        <span class="input-icon-addon">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/search -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                                <path d="M21 21l-6 -6"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="postList"></div>
+
+<div id="model"></div>
+
+{{!-- js file --}}
+<script src="/javascripts/timeline.js"></script>

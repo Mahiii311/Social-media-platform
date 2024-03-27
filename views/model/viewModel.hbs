@@ -1,0 +1,23 @@
+<div class="modal modal-blur fade show" id="modal-simple" tabindex="-1" style="display: block;" aria-modal="true"
+    role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-start">
+                <span class="avatar" style="background-image: url({{viewData.user.profilephoto}})"></span>
+                <span class="ms-2">
+                    <div class="modal-title">{{viewData.user.fullName}}</div>
+                    <div class="text-muted">{{viewData.user.email}}</div>
+                </span>
+                <button type="button" class="btn-close" id="closeModel" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="img-responsive img-responsive-21x25 card-img-top"
+                    style="background-image: url({{viewData.postImg}})"></div>
+                <div class="card-body" style="height: 100px;">
+                    <h3 class="card-title fs-4">{{viewData.title}}</h3>
+                    <p class="text-muted">{{viewData.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
