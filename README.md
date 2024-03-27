@@ -1,5 +1,5 @@
 ## command to get code
-- git clone \<url\>
+- git clone \<https url\>
 
 ## command to initial setup
 - npm i
